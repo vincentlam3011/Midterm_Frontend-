@@ -43,7 +43,7 @@ function register(user) {
         userService.register(user)
             .then(
                 user => {
-                    dispatch(success());
+                    dispatch(success(user));
                     dispatch(alertActions.success('Registration successful'));
                 },
                 error => {

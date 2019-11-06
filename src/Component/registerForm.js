@@ -29,7 +29,8 @@ class registerForm extends React.Component {
         const { user } = this.state;
         if (user.email && user.password && user.confirmPassword) {
             if (user.password === user.confirmPassword) {
-                this.props.register(user);
+                let reg = async () => { await this.props.register(user); };
+                reg();
                 // window.location.replace('/user/login');
                 // window.location.reload();
             }
