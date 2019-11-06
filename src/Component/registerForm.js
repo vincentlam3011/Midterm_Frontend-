@@ -31,7 +31,7 @@ class registerForm extends React.Component {
             if (user.password === user.confirmPassword) {
                 this.props.register(user);
                 // window.location.replace('/user/login');
-                window.location.reload();
+                // window.location.reload();
             }
         }
     }
